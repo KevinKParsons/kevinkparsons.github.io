@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128168497-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-128168497-1');
+        </script>
+        <meta charset="utf-8">
+        <title>Snake Game & Autopilot Algorithm</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="img/assets/favicon.png" rel="icon" type="image/png">
+        <link href="css/init.css" rel="stylesheet" type="text/css">
+        <link href="css/ion-icons.min.css" rel="stylesheet" type="text/css">
+        <link href="css/etline-icons.min.css" rel="stylesheet" type="text/css">
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link href="css/custom.css" rel="stylesheet" type="text/css">
+        <link href="css/colors/purple.css" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700%7CRaleway:400,100,200,300%7CHind:400,300" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body data-fade-in="true">
+
+        <!-- Start Nav -->
+        <nav class="navbar nav-down nav-small" data-fullwidth="true" data-menu-style="light" data-animation="noShrink">
+
+            <!-- Start Nav Content -->
+            <div class="container">
+
+                <div class="navbar-header">
+                    <div class="container">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar top-bar"></span>
+                            <span class="icon-bar middle-bar"></span>
+                            <span class="icon-bar bottom-bar"></span>
+                        </button>
+                        <a class="navbar-brand to-top" href="index.html"><img src="img/assets/logo-light.png" class="logo-light" alt="#"><img src="img/assets/logo-dark.png" class="logo-dark" alt="#"></a>
+                    </div>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="container">
+                        <ul class="nav navbar-nav menu-right">
+
+                            <li><a href="index.html">Home</a></li>
+                            
+                            <li class="dropdown">
+                                <a class="dropdown-toggle">Engineering<i class="ion-ios-arrow-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="published-papers.html">Published Papers</a></li>
+                                    <li><a href="thesis.html">Thesis</a></li>
+                                    <li><a href="senior-project.html">Senior Project</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown megamenu vos">
+                                <a class="dropdown-toggle">Projects<i class="ion-ios-arrow-down"></i></a>
+                                <ul class="dropdown-menu fullwidth">
+                                    <li class="megamenu-content withdesc">
+                                        <div class="col-md-3 mg-col">
+                                            <ul>
+                                                <li><a href="factory-game.html">Factory Game</a></li>
+                                                <li><a href="guess-the-drawing.html">Guess the Drawing Game</a></li>
+                                                <li><a href="snake-game.html">Snake Game & Autopilot Algorithm</a></li>
+                                                <li><a href="path-finding-algorithm.html">Path Finding Algorithms</a></li>
+                                                <li><a href="numbers-game.html">Numbers Game</a></li>
+
+                                                <li><a href="minimum-spanning-tree.html">Minimum Spanning Tree Solver</a></li>
+                                                <li><a href="heat-map.html">Heat Map</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3 mg-col">
+                                            <ul>
+                                                <li><a href="woodworking-desk.html">Woodworking: Desk</a></li>
+                                                <li><a href="woodworking-nightstand.html">Woodworking: Nightstand</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3 mg-col">
+                                            <ul>
+                                                <li><a href="matlab-three-doors-game-simulation.html">MATLAB: Three Doors Game Simulation</a></li>
+                                                <li><a href="matlab-rocket-trajectory-simulation.html">MATLAB: Rocket Simulation</a></li>
+                                                <li><a href="matlab-mountain-bike-suspension.html">MATLAB: Bike Suspension</a></li>
+                                                <li><a href="matlab-fea-steady-state-heat-transer.html">MATLAB: Steady State Thermal FEA</a></li>
+                                                <li><a href="matlab-fea-transient-heat-transer.html">MATLAB: Transient Thermal FEA</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle">Other<i class="ion-ios-arrow-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="other.html#cube-roots">Cube Roots</a></li>
+                                    <li><a href="other.html#free-fall-distance">Free Fall Distance</a></li>
+                                    <li><a href="other.html#speed-of-sound">Speed of Sound</a></li>                                    
+                                    <li><a href="other.html#statistics">Statistics</a></li>
+                                    <li><a href="other.html#sterioscopic-distance-measurements">Stereoscopice Estimates</a></li>
+                                    <li><a href="other.html#solar-system-scale">Solar System Scale</a></li>
+                                    <li><a href="other.html#travel">Travel</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="videos.html">Videos</a></li>
+                            <li><a href="photography.html">Photography</a></li>
+
+                            <li class="nav-separator"></li>
+                            <li  class="nav-icon"><a href="search.html"><i class="ion-search"></i></a></li>
+                            <li  class="nav-icon"><a href="mailto:?subject=Shared Site&amp;body=Website link: http://www.kevinkparsons.com" title="Share by Email"><i class="ion-android-share-alt"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Nav Content -->
+        </nav>
+        <!-- End Nav -->
+
+        <!-- Page Content -->
+        <section class="blog">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Page Content -->
+                    <div class="col-md-9">
+
+                        <div class="blog-post">
+
+                            <div class="post-header">
+                                <h5><span>In</span> <strong class="color">Projects</a></strong></h5>
+                                <a class="link-to-post" href="#"><h3><strong>Snake Game & Autopilot Algorithm</strong></h3></a>
+                            </div>
+
+                            <p>Snake is a game created with Tkinter and Python. The objective of the game is to steer the snake towards the randomly placed food while avoiding running into the walls or any part of the snake. The game gets progressively more difficult as the snake grows because free space runs a path finding and decision making algorithm that plays the game automatically without user input. The autopilot algorithm consists of several components, including a path finding algorithm and a contiguous free space finding algorithm.</p>
+
+                            <br>
+                            Visit GitHub to download the game:
+                            <br>
+                            <a href="https://github.com/KevinKParsons/snake-game" class="color">https://github.com/KevinKParsons/snake-game</a>
+                            <br>
+                            <br>
+                            
+                            <ul class="blog-img-list">
+
+                                <li class="row vertical-align">
+                                    <div class="col-md-9 mt20 mb20">
+                                        <a href="img\snake-game.png"><img src="img\snake-game.png" class="img-responsive width50" alt="#"></a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="post-header">
+                                            <h5 class="color"><strong>Figure 1</strong></h5>
+                                            <h6><strong>Snake Game</strong></h6>
+                                        </div>
+                                        <p>The blue square represents the snake's head and the green square represents the food. Gray segments represent the snake itself.</p>
+                                    </div>
+                                </li>
+
+                                <li class="row vertical-align">
+                                    <div class="col-md-9 mt20 mb20">
+                                        <a href="img\snake-game.gif"><img src="img\snake-game.gif" class="img-responsive width50" alt="#"></a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="post-header">
+                                            <h5 class="color"><strong>Figure 2</strong></h5>
+                                            <h6><strong>Snake Game - Running</strong></h6>
+                                        </div>
+                                        <p>Running autopilot algorithm. Algorithm pathfinding mode and safety check mode are shown in the top right corner.</p>
+                                    </div>
+                                </li>
+
+                                <li class="row vertical-align">
+                                    <div class="col-md-9 mt20 mb20">
+                                        <a href="img\snake-game-visuals.png"><img src="img\snake-game-visuals.png" class="img-responsive width50" alt="#"></a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="post-header">
+                                            <h5 class="color"><strong>Figure 3</strong></h5>
+                                            <h6><strong>Snake Game & Algorithm Visuals</strong></h6>
+                                        </div>
+                                        <p>Autopilot algorithm visuals are shown. The green box represents the start of the pathfinding algorithm and the red box represents the destination. The blue circles show the explored free nodes. The grey circles show the frontier nodes that have not been explored yet.</p>
+                                    </div>
+                                </li>
+
+                                <li class="row vertical-align">
+                                    <div class="col-md-9 mt20 mb20">
+                                        <a href="img\snake-game-visuals.gif"><img src="img\snake-game-visuals.gif" class="img-responsive width50" alt="#"></a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="post-header">
+                                            <h5 class="color"><strong>Figure 4</strong></h5>
+                                            <h6><strong>Snake Game & Algorithm Visuals - Running</strong></h6>
+                                        </div>
+                                        <p>Autopilot algorithm visuals can be enabled at any point by toggling the 'Visuals' button.</p>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <br>
+                            <h5><strong>Python Source - snake.py</strong></h5>
+
+                            <script src="https://gist.github.com/KevinKParsons/3a84ff2e0e79cf617c7a5ea2fbf74cec.js"></script>
+
+                            <br>
+                            <br>
+                            <h5><strong>Excel VBA Version</strong></h5>
+
+                            <p>Similar version of the python game except it is programmed with VBA in Excel. Customized walls can be drawn and the algoirthm will avoid them.</p>
+                            
+                            <li class="row vertical-align">
+                                <div class="col-md-6 mt20 mb20">
+                                    <a href="img\snake-excel.png"><img src="img\snake-excel.png" class="img-responsive width100" alt="#"></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="post-header">
+                                        <h5 class="color"><strong>Figure 1</strong></h5>
+                                        <h6><strong>Snake Game</strong></h6>
+                                    </div>
+                                    <p>Snake game in Excel.</p>
+                                </div>
+                            </li>
+
+                            <div class="mt40">
+                                <h5><strong>Excel File Download</strong></h5>
+                                <p><a href="files/snake-game.xlsm" class="color">Download</a> the snake game Excel file.</p>
+                            </div>
+                        
+                            <div class="post-tags">
+                                <a href="search.html#gsc.tab=0&gsc.q=Programming&gsc.sort=" rel="tag">Programming</a>
+                                <a href="search.html#gsc.tab=0&gsc.q=Python&gsc.sort=" rel="tag">Python</a>
+                                <a href="search.html#gsc.tab=0&gsc.q=Game&gsc.sort=" rel="tag">Game</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- End Page Content -->
+
+                    <!-- Sidebar -->
+                    <div class="col-md-3 sidebar">
+
+                        <div class="blog-widget">
+                            <h5>Projects</h5>
+                            <p>Ranging from Python & MATLAB to woodworking.</p>
+                        </div>
+
+                        <!-- Start Nav Projects -->
+                        <div class="blog-widget">
+                            <h5>Programming</h5>
+                            <ul class="category-list list-icons">
+                                <li><a href="factory-game.html"><i class="ion-ios-arrow-right"></i>Factory Game</a></li>
+                                <li><a href="guess-the-drawing.html"><i class="ion-ios-arrow-right"></i>Guess the Drawing Game</a></li>
+                                <li><a href="snake-game.html"><i class="ion-ios-arrow-right"></i>Snake Game & Autopilot Algorithm</a></li>
+                                <li><a href="path-finding-algorithm.html"><i class="ion-ios-arrow-right"></i>Path Finding Algorithms</a></li>
+                                <li><a href="numbers-game.html"><i class="ion-ios-arrow-right"></i>Numbers Game</a></li>
+                                <li><a href="minimum-spanning-tree.html"><i class="ion-ios-arrow-right"></i>Minimum Spanning Tree</a></li>
+                                <li><a href="heat-map.html"><i class="ion-ios-arrow-right"></i>Heat Map</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="blog-widget">
+                            <h5>MATLAB</h5>
+                            <ul class="category-list list-icons">
+                                <li><a href="matlab-three-doors-game-simulation.html"><i class="ion-ios-arrow-right"></i>MATLAB: Three Doors Game Simulation</a></li>
+                                <li><a href="matlab-rocket-trajectory-simulation.html"><i class="ion-ios-arrow-right"></i>MATLAB: Rocket Simulation</a></li>
+                                <li><a href="matlab-mountain-bike-suspension.html"><i class="ion-ios-arrow-right"></i>MATLAB: Bike Suspension</a></li>
+                                <li><a href="matlab-fea-steady-state-heat-transer.html"><i class="ion-ios-arrow-right"></i>MATLAB: Steady State Thermal FEA</a></li>
+                                <li><a href="matlab-fea-transient-heat-transer.html"><i class="ion-ios-arrow-right"></i>MATLAB: Transient Thermal FEA</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="blog-widget">
+                            <h5>Woodworking</h5>
+                            <ul class="category-list list-icons">
+                                <li><a href="woodworking-desk.html"><i class="ion-ios-arrow-right"></i>Woodworking: Desk</a></li>
+                                <li><a href="woodworking-nightstand.html"><i class="ion-ios-arrow-right"></i>Woodworking: Nightstand</a></li>
+                            </ul>
+                        </div>
+                        <!-- End Nav Projects-->
+                        <div class="blog-widget blog-tags">
+                            <h5>Tags</h5>
+                            <ul class="tags-list">
+                                <li><a href="search.html#gsc.tab=0&gsc.q=MATLAB&gsc.sort=">MATLAB</a></li>
+                                <li><a href="search.html#gsc.tab=0&gsc.q=FEA&gsc.sort=">FEA</a></li>
+                                <li><a href="search.html#gsc.tab=0&gsc.q=Thermal&gsc.sort=">Thermal</a></li>
+                                <li><a href="search.html#gsc.tab=0&gsc.q=Programming&gsc.sort=">Programming</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- End Sidebar -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer style-1 dark">
+
+            <ul>
+            </ul>
+            <a href="index.html"><strong>© Kevin Parsons 2019</strong></a>
+            <br>
+            <p></p>
+            
+            <!-- Back To Top Button -->
+            <span><a class="scroll-top"><i class="ion-chevron-up"></i></a></span>
+
+        </footer>
+        <!-- End Footer-->
+
+        <script src="js/jquery.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/scripts.js"></script>
+
+    </body>
+</html>
